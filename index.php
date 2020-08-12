@@ -89,7 +89,13 @@
     </div>
     <footer class="text-center"><small>&copy; Copyright 2020-2021, ecommerce Corporation</small></footer>
     </div>
-   
+   <!-- detials modal -->
+   <?php include 'image1-detials.php';?>
+   <?php include 'image2-detials.php';?>
+   <?php include 'image3-detials.php';?>
+   <?php include 'image4-detials.php';?>
+   <?php include 'image5-detials.php';?>
+   <?php include 'image6-detials.php';?>
 
 </body>
 </html>
