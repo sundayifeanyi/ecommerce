@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <title>ecommerce.com</title>
-</head>
-<body>
-
-    <nav class="navbar navbar-default navbar-fixed-top">
+<?php include 'header.php';?>
+ <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <a href="index.php" class="navbar-brand"> shopifyme </a>
             <ul class="nav navbar-nav">
@@ -46,48 +34,50 @@
     <h2 class="text-center">featured products</h2>
     <div class="col-md-3">
     <h4>jeans</h4>
-    <img src="images/lapback.jpg" alt="lappy" id="image" width="200px">
+    <img src="images/lapback.jpg" alt="lappy" id="1img" width="200px">
     <p class="price_list text-danger">Price: <s>$24</s></p>
     <p class="price ">Price: <s>$19.99</s></p>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detials">details</button>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detial">details</button>
+    
     </div>
     <div class="col-md-3">
     <h4>shirt</h4>
-    <img src="images/lapback.jpg" alt="shirt" id="image" width="200px">
+    <img src="images/lapback.jpg" alt="shirt" id="image" width="200px"> 
     <p class="price_list text-danger">Price: <s>$24</s></p>
     <p class="price ">Price: <s>$19.99</s></p>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detials">details</button>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detial1">details</button>
     </div>
     <div class="col-md-3">
     <h4>mtn</h4>
     <img src="images/lapback.jpg" alt="mtn" id="image" width="200px">
     <p class="price_list text-danger">Price: <s>$24</s></p>
     <p class="price ">Price: <s>$19.99</s></p>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detials">details</button>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detial2">details</button>
     </div>
     <div class="col-md-3">
     <h4>glo</h4>
     <img src="images/lapback.jpg" alt="glo" id="image" width="200px">
     <p class="price_list text-danger">Price: <s>$24</s></p>
     <p class="price ">Price: <s>$19.99</s></p>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detials">details</button>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detial3">details</button>
     </div>
     <div class="col-md-3">
     <h4>etsalat</h4>
     <img src="images/lapback.jpg" alt="etsalat" id="image" width="200px">
     <p class="price_list text-danger">Price: <s>$24</s></p>
     <p class="price ">Price: <s>$19.99</s></p>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detials">details</button>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detial4">details</button>
     </div>
     <div class="col-md-3">
     <h4>airtel</h4>
     <img src="images/lapback.jpg" alt="airtel" id="image" width="200px">
     <p class="price_list text-danger">Price: <s>$24</s></p>
     <p class="price ">Price: <s>$19.99</s></p>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detials">details</button>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detial5">details</button>
     </div>
     </div>
-    <footer class="text-center"><small>&copy; Copyright 2020-2021, ecommerce Corporation</small></footer>
+    <?php include 'footer.php';?>
     </div>
    <!-- detials modal -->
    <?php include 'image1-detials.php';?>
@@ -96,6 +86,8 @@
    <?php include 'image4-detials.php';?>
    <?php include 'image5-detials.php';?>
    <?php include 'image6-detials.php';?>
+
+ 
 
 </body>
 </html>
