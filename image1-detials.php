@@ -1,23 +1,4 @@
 <!-- Modal -->
-<div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="detailLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="detailLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...same here
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="modal fade detials" id="detial" tableindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
     <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -42,12 +23,27 @@
                     <p class="text-center">Price: $24.99</p>
                     <p class="text-center">Brand: stuffs</p>
                 </div>
+                <form action="add-chat.php" method="post">
+                <div class="form-group">
+                <div class="col-xs-3">
+                <label for="quantity" id="quantity-label">Quantity</label>
+                <input type="text" name="quantity" id="quantity" class="form-control">
+                <label for="size">size</label>
+                <select name="size" id="size" class="form-control">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                </select>
+                </div>
+                </div>
+                </form>
                 <hr>
-                
                 </div>
             </div>
         </div>
         <div class="modal-footer bg-primary">
+          <button type="submit" class="btn btn-warning"> <span class="glyphicon glyphicon-shopping-cart"></span> Save changes</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
     </div>

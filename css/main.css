@@ -30,8 +30,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: left bottom;
+    background-position: left top;
     background-size: 50% 200px;
     top: 80% ;
-    margin-top: -90px;
+    margin-top: -90;
 }
+

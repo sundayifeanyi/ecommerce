@@ -12,7 +12,7 @@
                 <div class="row">
                 <div class="col-sm-6">
                     <div class="center-block">
-                    <img src="images/lapback.jpg" alt="images1" class="detials img-responsive" height="200px">
+                    <img src="images/ecomercs.png" alt="images1" class="detials img-responsive" height="200px">
                     </div>
                 </div>
 
