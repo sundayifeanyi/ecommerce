@@ -1,4 +1,13 @@
 <!-- Modal -->
+
+<?php
+
+// INSERT INTO `products` (`id`, `product_title`, `product_price`, `product_list_price`, 
+// `product_brand`, `product_category`, `product_image`, `product_desc`, `featured`, `size`)
+//  VALUES (NULL, 'levis\'jeans', '40', '39', '1', '', 'ecommerce/images/ecom-dark.jpg', 
+//  'awesome wear .. buy yours now', '1', 'no:1 no:2');
+
+?>
 <div class="modal fade detials" id="detial" tableindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
     <div class="modal-dialog modal-lg">
     <div class="modal-content">

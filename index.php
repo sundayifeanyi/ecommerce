@@ -1,45 +1,55 @@
 <?php include 'core/header.php';?>
-<?php
-$query= "SELECT * FROM category WHERE parent = 0";
-$createquery = mysqli_query($db,$query);
-?>
- <nav class="navbar navbar-default navbar-fixed-top">
+
+ <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
         <div class="container">
             <a href="index.php" class="navbar-brand"> shopifyme </a>
             <ul class="nav navbar-nav">
             <?php
-            while($parent = mysqli_fetch_assoc($createquery));
-            $p_id= $parent['id'];
-            $p_cate = $parent['category']
+            $query= "SELECT * FROM category WHERE parent = 0 ";
+            $createquery = mysqli_query($db,$query);
+            while($parent = mysqli_fetch_assoc($createquery)){
+             $p_id= $parent['id'];
+             $p_category = $parent['category'];
+        }
             ?>
-            <?php
-                $query2= "SELECT * FROM category WHERE parent = $parent";
-                $queryp = $db->query($query2);
-            ?>
+
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $p_cate?> <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $p_category?>
+                    <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="#">mtn</a>
-                        </li>
-                        <li>
-                            <a href="#">airtel</a>
-                        </li>
-                        <li>
-                            <a href="#">glo</a>
-                        </li>
-                        <li>
-                            <a href="#">9mobile</a>
-                        </li>
+                    <?php
+                    $query2= "SELECT * FROM category WHERE parent = 2";
+                    $queryp = mysqli_query($db,$query2);
+                     while($child = mysqli_fetch_assoc($queryp)){
+                        $category = $child['category'];
+                        
+                        echo "<li><a href='#'> {$category} </a></li>";
+
+                    }
+                        ?>
+                     
                     </ul>
                 </li>
             </ul>
-            <?php endwhile; ?>
+            
         </div>
     </nav>
+
+<?php
+$select = "SELECT * FROM products";
+$exequery = mysqli_query($db, $select);
+?>
+<?php
+while($row = mysqli_fetch_assoc($exequery)){
+     $title = $row['product_title'];
+     $image = $row['product_image'];
+     $price = $row['product_price'];
+     $discount = $row['product_list_price'];
+}
+?>
     <div id="background">
-    <div id="image1"> </div>
-    <div id="image2">  </div>
+    <!-- <div id="image1"> </div>
+    <div id="image2">  </div> -->
     </div>
     <div class="col-md-2"></div>
     <div class="col-md-8">
@@ -47,49 +57,15 @@ $createquery = mysqli_query($db,$query);
     <div class="row">
     <h2 class="text-center">featured products</h2>
     <div class="col-md-3">
-    <h4>jeans</h4>
-    <img src="images/lapback.jpg" alt="lappy" id="image" width="200px">
-    <p class="price_list text-danger">Price: <s>$24</s></p>
-    <p class="price ">Price: <s>$19.99</s></p>
+    <h4><?php echo $title; ?></h4>
+    <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" id="image" width="200px">
+    <p class="price_list text-danger">Price: <s>$<?php echo $price; ?></s></p>
+    <p class="price ">Price: <small>$<?php echo $discount; ?></small></p>
     <!-- Trigger the modal with a button -->
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detial">details</button>
     
     </div>
-    <div class="col-md-3">
-    <h4>shirt</h4>
-    <img src="images/ecom-dark.jpg" alt="shirt" id="image" width="200px"> 
-    <p class="price_list text-danger">Price: <s>$24</s></p>
-    <p class="price ">Price: <s>$19.99</s></p>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detial1">details</button>
-    </div>
-    <div class="col-md-3">
-    <h4>mtn</h4>
-    <img src="images/pen.jpg" alt="mtn" id="image" width="200px">
-    <p class="price_list text-danger">Price: <s>$24</s></p>
-    <p class="price ">Price: <s>$19.99</s></p>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detial2">details</button>
-    </div>
-    <div class="col-md-3">
-    <h4>glo</h4>
-    <img src="images/shop.jpg" alt="glo" id="image" width="200px">
-    <p class="price_list text-danger">Price: <s>$24</s></p>
-    <p class="price ">Price: <s>$19.99</s></p>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detial3">details</button>
-    </div>
-    <div class="col-md-3">
-    <h4>etisalat</h4>
-    <img src="images/download.jpg" alt="etisalat" id="image" width="200px">
-    <p class="price_list text-danger">Price: <s>$24</s></p>
-    <p class="price ">Price: <s>$19.99</s></p>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detial4">details</button>
-    </div>
-    <div class="col-md-3">
-    <h4>airtel</h4>
-    <img src="images/1366.jpg" alt="airtel" id="image" width="200px">
-    <p class="price_list text-danger">Price: <s>$24</s></p>
-    <p class="price ">Price: <s>$19.99</s></p>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#detial5">details</button>
-    </div>
+    
     
     </div>
     <?php include 'core/footer.php';?>
