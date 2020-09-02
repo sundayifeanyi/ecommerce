@@ -1,6 +1,19 @@
 <!-- Modal -->
 
 <?php
+//require_once ('dbase.php');
+$id = $_POST['id'];
+$id = (int)$id ;
+$sqlquery = "SELECT * FROM products WHERE id = {$id}";
+$exequery = $db->query($sqlquery);
+$product = mysqli_fetch_assoc($exequery);
+$brand_id = $_POST['brand'];
+$brandquery = "SELECT * FROM brand WHERE brand = {$brand_id}";
+$bquery = $db->query($brandquery);
+$product_brand = mysqli_fetch_assoc($bquery);
+$size = $product['size'];
+$size = rtrim($size, ',');
+$size = explode(',', $size);// errrors
 
 // INSERT INTO `products` (`id`, `product_title`, `product_price`, `product_list_price`, 
 // `product_brand`, `product_category`, `product_image`, `product_desc`, `featured`, `size`)

@@ -1,4 +1,5 @@
 <?php include 'core/header.php';?>
+<!-- nav bar goes here -->
 <?php include 'core/navigation.php';?>
 
 <?php
@@ -13,10 +14,10 @@ while($row = mysqli_fetch_assoc($exequery)){
      $discount = $row['product_list_price'];
 }
 ?>
-    <div id="background">
-    <!-- <div id="image1"> </div>
-    <div id="image2">  </div> -->
-    </div>
+    <!-- headerfull -->
+    <?php include 'core/headfull.php';?>
+
+    <!-- products display -->
     <div class="col-md-2"></div>
     <div class="col-md-8">
     <!-- featured products -->
@@ -37,12 +38,7 @@ while($row = mysqli_fetch_assoc($exequery)){
     <?php include 'core/footer.php';?>
     </div>
    <!-- detials modal -->
-   <?php include 'image1-detials.php';?>
-   <?php include 'image2-detials.php';?>
-   <?php include 'image3-detials.php';?>
-   <?php include 'image4-detials.php';?>
-   <?php include 'image5-detials.php';?>
-   <?php include 'image6-detials.php';?>
+   <?php include 'modals.php';?>
 
  
 

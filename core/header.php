@@ -1,4 +1,4 @@
-<?php include 'dbase.php';?>
+<?php require_once 'dbase.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
