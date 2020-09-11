@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <?php include 'core/header.php';?>
 <!-- nav bar goes here -->
 <?php include 'core/navigation.php';?>
@@ -41,6 +42,6 @@ while($row = mysqli_fetch_assoc($exequery)){
    <?php include 'modals.php';?>
 
  
-
+   <?php// ob_get_clean();?>
 </body>
 </html>
