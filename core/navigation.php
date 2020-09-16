@@ -29,6 +29,7 @@
                      
                     </ul>
                 </li>
+                <li class=""><a href="cart.php"> <span class="glyphicon glyphicon-shopping-cart"></span>my cart</a></li>
             </ul>
             
         </div>
